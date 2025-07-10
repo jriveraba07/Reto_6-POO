@@ -31,5 +31,5 @@ try:
 
     print("el resultado es:", resultado)
 except Exception as e:
-    print(f"hay un error tipo '{e}', recuerda poner los datos como se piden")
+    print(f"hay un error tipo <{e}>, recuerda poner los datos como se piden")
     

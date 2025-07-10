@@ -38,11 +38,16 @@ class Triangle(Shape):
         d = [self.get_Point_1(), self.get_Point_2(), self.get_Point_3()]
         angle = []
         for i in range(3):
-            vec1 = d[i] - d[(i + 1) % 3]
-            vec2 = d[i] - d[(i + 2) % 3]
-            a = vec1.prod_punto(vec2)
-            b = vec1.compute_distance(Point(0, 0)) * vec2.compute_distance(Point(0, 0))
-            angle.append(round(degrees(acos(a / b)), 2))
+            try:    
+                vec1 = d[i] - d[(i + 1) % 3]
+                vec2 = d[i] - d[(i + 2) % 3]
+                a = vec1.prod_punto(vec2)
+                b = vec1.compute_distance(Point(0, 0)) * vec2.compute_distance(Point(0, 0))
+                angle.append(round(degrees(acos(a / b)), 2))
+            
+            #! Aqui puede se error del usuario al poner una linea mal haciendo que se defina sobre un mismo punto
+            except Exception as e:
+                return f"error tipo {e}, un lado tiene el final igual que el inicio, porfavor corregir eso"
         return angle
 
     def inner_angles(self):

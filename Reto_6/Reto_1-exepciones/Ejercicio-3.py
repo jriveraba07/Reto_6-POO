@@ -52,4 +52,6 @@ try:
     print("los primos en la lista son:", y)  
 
 except Exception as e:
-    print(f"hay un error tipo <{e}>, recuerda poner los datos como se piden")
+    print(f"hay un error tipo <{e}>, recuerda la lista con corchetes y con comas entre elementos, los elementos deben ser unicamente enteros")
+
+    

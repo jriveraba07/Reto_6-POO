@@ -36,5 +36,5 @@ try:
 
     print("La suma mas alta es", y, "con los numeros con posición en", p, "y", f, "(comenzando desde 0)")
 except Exception as e:
-    print(f'"hay un error tipo <{e}>, recuerda la lista con corchetes y con comas entre elementos,
-           los elementos deben ser unicamente enteros y la lista no debe estar vacia"')
+    print(f"hay un error tipo <{e}>")
+    print("recuerda la lista con corchetes y con comas entre elementos, los elementos deben ser unicamente enteros y la lista no debe estar vacia")
